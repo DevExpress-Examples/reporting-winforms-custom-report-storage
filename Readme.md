@@ -1,13 +1,13 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [DataSetReportStorage.cs](./CS/DataSetReportStorage.cs) (VB: [DataSetReportStorage.vb](./VB/DataSetReportStorage.vb))
-* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
-* [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb))
-* [StorageDataSet.cs](./CS/StorageDataSet.cs) (VB: [StorageDataSet.vb](./VB/StorageDataSet.vb))
-* [StorageEditorForm.cs](./CS/StorageEditorForm.cs) (VB: [StorageEditorForm.vb](./VB/StorageEditorForm.vb))
-* [XpoReportStorage.cs](./CS/XpoReportStorage.cs) (VB: [XpoReportStorage.vb](./VB/XpoReportStorage.vb))
-* [ZipReportStorage.cs](./CS/ZipReportStorage.cs) (VB: [ZipReportStorage.vb](./VB/ZipReportStorage.vb))
+* [DataSetReportStorage.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/DataSetReportStorage.cs) (VB: [DataSetReportStorage.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/DataSetReportStorage.vb))
+* [Form1.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/Form1.cs) (VB: [Form1.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/Form1.vb))
+* [Program.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/Program.cs) (VB: [Program.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/Program.vb))
+* [StorageDataSet.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/StorageDataSet.cs) (VB: [StorageDataSet.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/StorageDataSet.vb))
+* [StorageEditorForm.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/StorageEditorForm.cs) (VB: [StorageEditorForm.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/StorageEditorForm.vb))
+* [XpoReportStorage.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/XpoReportStorage.cs) (VB: [XpoReportStorage.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/XpoReportStorage.vb))
+* [ZipReportStorage.cs](./CS/Reporting_report-storage-for-the-end-user-report-designer-e2704/ZipReportStorage.cs) (VB: [ZipReportStorage.vb](./VB/Reporting_report-storage-for-the-end-user-report-designer-e2704/ZipReportStorage.vb))
 <!-- default file list end -->
 # Report Storage for the End-User Report Designer
 
