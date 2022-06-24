@@ -1,8 +1,3 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128604636/2022.1)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2704)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Report Storage for the End-User Report Designer
 
 This example demonstrates how to implement a report storage to store and retrieve <a href="http://documentation.devexpress.com/XtraReports/CustomDocument2592.aspx"><u>report definitions</u></a>. It contains code for the following custom storages:
@@ -13,8 +8,7 @@ This example demonstrates how to implement a report storage to store and retriev
 
 A storage is a class that inherits the [ReportStorageExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Extensions.ReportStorageExtension) class and implements methods to store and retrieve report definitions in XML format.
 
-Built-in report serializer does not serialize the Object data sources, data sets, XPO data sources, and user-type report parameters.  
-For information on how to implement a custom XML serialization logic, review the following examples:
+Note that the default report serialization mechanism does not support data sources and user-defined types, such as data objects, data sets, XPO data sources, and custom report parameters. You should implement custom XML serialization logic to store these objects along with the reports. Review the following examples:
 - [How to implement custom XML serialization of a report that is bound to a dataset](https://github.com/DevExpress-Examples/Reporting_how-to-implement-custom-xml-serialization-of-a-report-that-is-bound-to-a-dataset-e3157)
 - [How to serialize the XPO data source](https://github.com/DevExpress-Examples/Reporting_how-to-serialize-an-xpo-data-source-e3169)
 - [How to serialize parameters of custom types](https://github.com/DevExpress-Examples/Reporting_how-to-serialize-parameters-of-custom-types-e3186)
