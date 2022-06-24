@@ -11,6 +11,8 @@ This example demonstrates how to implement a report storage to store and retriev
 - XpoReportStorage stores reports in an [XPCollection](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPCollection).
 - ZipReportStorage stores reports in a zip archive.
 
+The code that specifies a custom storage used in this example is located in the [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb)) file.
+
 A storage is a class that inherits the [ReportStorageExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Extensions.ReportStorageExtension) class and implements methods to store and retrieve report definitions in XML format.
 
 Note that the default report serialization mechanism does not support data sources and user-defined types, such as data objects, data sets, XPO data sources, and custom report parameters. You should implement custom XML serialization logic to store these objects along with the reports. Review the following examples:
@@ -30,9 +32,6 @@ If you click **Design**, the End-User Report Designer is invoked. It allows you 
 When you click **Open** or **Save** in the Report Designer, the **Storage Editor** window appears. It allows you to select a report, and then save or load it.
 
 ![Storage Editor](Images/storage-editor.png)
-
-The code that allows you to change the custom storage used in this example is located in the [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb)) file.
-
 
 
 ## Files to Look At
