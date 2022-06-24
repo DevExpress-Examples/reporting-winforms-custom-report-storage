@@ -1,8 +1,3 @@
-<!-- default badges list -->
-![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128604636/2022.1)
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2704)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Report Storage for the End-User Report Designer
 
 This example demonstrates how to implement a report storage to store and retrieve <a href="http://documentation.devexpress.com/XtraReports/CustomDocument2592.aspx"><u>report definitions</u></a>. It contains code for the following custom storages:
@@ -14,7 +9,7 @@ This example demonstrates how to implement a report storage to store and retriev
 A storage is a class that inherits the [ReportStorageExtension](https://docs.devexpress.com/XtraReports/DevExpress.XtraReports.Extensions.ReportStorageExtension) class and implements methods to store and retrieve report definitions in XML format.
 
 Built-in report serializer does not serialize the Object data sources, data sets, XPO data sources, and user-type report parameters.  
-For informatoion on how to implement a custom XML serialization logic, review the following examples:
+For information on how to implement a custom XML serialization logic, review the following examples:
 - [How to implement custom XML serialization of a report that is bound to a dataset](https://github.com/DevExpress-Examples/Reporting_how-to-implement-custom-xml-serialization-of-a-report-that-is-bound-to-a-dataset-e3157)
 - [How to serialize the XPO data source](https://github.com/DevExpress-Examples/Reporting_how-to-serialize-an-xpo-data-source-e3169)
 - [How to serialize parameters of custom types](https://github.com/DevExpress-Examples/Reporting_how-to-serialize-parameters-of-custom-types-e3186)
@@ -22,15 +17,15 @@ For informatoion on how to implement a custom XML serialization logic, review th
 
 When you run the project, a window appears that allows you to select a report, and open the End-User Designer to edit the report, or open the report preview.
 
-![Select Report](images/select-report.png)
+![Select Report](Images/select-report.png)
 
 If you click **Design**, the End-User Report Designer is invoked. It allows you to open, edit and save the report.
 
-![End-User Report Designer](images/report-designer.png)
+![End-User Report Designer](Images/report-designer.png)
 
 When you click **Open** or **Save** in the Report Designer, the **Storage Editor** window appears. It allows you to select a report, and then save or load it.
 
-![Storage Editor](images/storage-editor.png)
+![Storage Editor](Images/storage-editor.png)
 
 The code that allows you to change the custom storage used in this example is located in the [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb)) file.
 
