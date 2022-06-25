@@ -7,9 +7,9 @@
 
 This example demonstrates how to implement a report storage to store and retrieve [report layouts](https://docs.devexpress.com/XtraReports/2592/). The project contains code for the following custom storages:
 
-- DataSetReportStorage. It stores reports in an XML file.
-- XpoReportStorage. It stores reports in an [XPCollection](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPCollection).
-- ZipReportStorage. It stores reports in a zip archive.
+- DataSetReportStorage — stores reports in an XML file.
+- XpoReportStorage — stores reports in an [XPCollection](https://docs.devexpress.com/XPO/DevExpress.Xpo.XPCollection).
+- ZipReportStorage — stores reports in a zip archive.
 
 Uncomment the appropriate code in the [Program.cs](./CS/Program.cs) (VB: [Program.vb](./VB/Program.vb)) file to select a storage type.
 
