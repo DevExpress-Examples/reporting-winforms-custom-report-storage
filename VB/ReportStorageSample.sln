@@ -1,6 +1,8 @@
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReportStorageSample", "ReportStorageSample.vbproj", "{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32414.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "ReportStorageSampleVB", "ReportStorageSampleVB.vbproj", "{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,12 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A86B3AAD-E816-4A7C-A9A9-1AC2A963B8F7}
 	EndGlobalSection
 EndGlobal

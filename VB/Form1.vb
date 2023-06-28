@@ -16,7 +16,7 @@ Namespace ReportStorageSample
 
 		Private Sub buttonDesign_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonDesign.Click
 			' Open a selected report in the report designer.
-			Dim form As New XRDesignForm()
+			Dim form As New XRDesignRibbonForm()
 			Dim url As String = GetSelectedUrl()
 			If (Not String.IsNullOrEmpty(url)) Then
 				form.OpenReport(url)
@@ -34,7 +34,7 @@ Namespace ReportStorageSample
 			' Show a preview for a selected report.
 			Dim report As XtraReport = GetSelectedReport()
 			If report IsNot Nothing Then
-				report.ShowPreviewDialog()
+				report.ShowRibbonPreviewDialog()
 			End If
 		End Sub
 		Private Function GetSelectedUrl() As String

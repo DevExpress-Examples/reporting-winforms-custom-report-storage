@@ -14,7 +14,7 @@ namespace ReportStorageSample {
 
         private void buttonDesign_Click(object sender, EventArgs e) {
             // Open a selected report in the report designer.
-            XRDesignForm form = new XRDesignForm();
+            XRDesignRibbonForm form = new XRDesignRibbonForm();
             string url = GetSelectedUrl();
             if (!string.IsNullOrEmpty(url))
                 form.OpenReport(url);
@@ -30,7 +30,7 @@ namespace ReportStorageSample {
             // Show a preview for a selected report.
             XtraReport report = GetSelectedReport();
             if (report != null)
-                report.ShowPreviewDialog();
+                report.ShowRibbonPreviewDialog();
         }
         string GetSelectedUrl() {
             return listBox1.SelectedItem as string;

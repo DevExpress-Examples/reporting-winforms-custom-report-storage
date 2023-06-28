@@ -31,11 +31,11 @@ namespace ReportStorageSample {
             // buttonDesign
             // 
             this.buttonDesign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonDesign.Location = new System.Drawing.Point(50, 196);
+            this.buttonDesign.Location = new System.Drawing.Point(31, 196);
             this.buttonDesign.Name = "buttonDesign";
             this.buttonDesign.Size = new System.Drawing.Size(123, 31);
             this.buttonDesign.TabIndex = 2;
-            this.buttonDesign.Text = "Show Designer";
+            this.buttonDesign.Text = "Design";
             this.buttonDesign.UseVisualStyleBackColor = true;
             this.buttonDesign.Click += new System.EventHandler(this.buttonDesign_Click);
             // 
@@ -43,19 +43,19 @@ namespace ReportStorageSample {
             // 
             this.buttonPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonPreview.Enabled = false;
-            this.buttonPreview.Location = new System.Drawing.Point(192, 196);
+            this.buttonPreview.Location = new System.Drawing.Point(173, 196);
             this.buttonPreview.Name = "buttonPreview";
             this.buttonPreview.Size = new System.Drawing.Size(121, 31);
             this.buttonPreview.TabIndex = 0;
-            this.buttonPreview.Text = "Show Preview";
+            this.buttonPreview.Text = "Preview";
             this.buttonPreview.UseVisualStyleBackColor = true;
             this.buttonPreview.Click += new System.EventHandler(this.buttonPreview_Click);
             // 
             // listBox1
             // 
-            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(12, 18);
             this.listBox1.Name = "listBox1";
@@ -72,7 +72,7 @@ namespace ReportStorageSample {
             this.Controls.Add(this.buttonPreview);
             this.Controls.Add(this.buttonDesign);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Select Report";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
