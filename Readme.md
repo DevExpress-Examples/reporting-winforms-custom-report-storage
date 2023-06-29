@@ -1,3 +1,8 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/128604636/2022.2)
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/E2704)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Reporting for WinForms - How to Implement a Custom Report Storage
 
 This example demonstrates how to implement a report storage to store and retrieve [report layouts](https://docs.devexpress.com/XtraReports/2592/). The project contains code for the following custom storages:
