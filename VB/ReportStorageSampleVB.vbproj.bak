@@ -1,14 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{243F4F33-2C5D-4D88-9DD0-1C1037551C4D}</ProjectGuid>
+    <ProjectGuid>{A8A867C8-5CEE-47FD-83F8-7AE925C73E6F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReportStorageSample</RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <AssemblyName>ReportStorageSample</AssemblyName>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
@@ -16,6 +16,10 @@
     </UpgradeBackupLocation>
     <OldToolsVersion>2.0</OldToolsVersion>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -40,9 +44,9 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
@@ -52,65 +56,63 @@
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
     <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DevExpress.Printing.v23.1.Core">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Printing.v22.2.Core">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Drawing.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Drawing.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Data.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Data.Desktop.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Data.Desktop.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Utils.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Xpo.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Xpo.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Charts.v23.1.Core">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Charts.v22.2.Core">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraBars.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v22.2.Wizard">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v23.1.Wizard">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraCharts.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraCharts.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.PivotGrid.v22.2.Core">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.PivotGrid.v23.1.Core">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraPivotGrid.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPivotGrid.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Sparkline.v22.2.Core">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Sparkline.v23.1.Core">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraPrinting.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraPrinting.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.Utils.v22.2.UI">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.Utils.v23.1.UI">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.CodeParser.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.CodeParser.v23.1">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraReports.v22.2">
+      <Private>True</Private>
     </Reference>
-    <Reference Include="DevExpress.XtraReports.v23.1">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
-    <Reference Include="DevExpress.XtraReports.v23.1.Extensions">
-      <SpecificVersion>False</SpecificVersion>
+    <Reference Include="DevExpress.XtraReports.v22.2.Extensions">
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
@@ -129,33 +131,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StorageDataSet.cs">
+    <Compile Include="StorageDataSet.vb">
       <DependentUpon>StorageDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="ZipReportStorage.cs" />
-    <Compile Include="DataSetReportStorage.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ZipReportStorage.vb" />
+    <Compile Include="DataSetReportStorage.vb" />
+    <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
     <EmbeddedResource Include="Form1.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Properties\Resources.resx">
+    <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StorageEditorForm.resx">
-      <DependentUpon>StorageEditorForm.cs</DependentUpon>
+      <DependentUpon>StorageEditorForm.vb</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
+    <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
@@ -164,39 +166,39 @@
     <None Include="Data\nwind.db">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
-    <None Include="Properties\Settings.settings">
+    <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
+    <None Include="packages.config" />
     <None Include="StorageDataSet.xsc">
       <DependentUpon>StorageDataSet.xsd</DependentUpon>
     </None>
     <None Include="StorageDataSet.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>StorageDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>StorageDataSet.Designer.vb</LastGenOutput>
     </None>
     <None Include="StorageDataSet.xss">
       <DependentUpon>StorageDataSet.xsd</DependentUpon>
     </None>
-    <Compile Include="Properties\Settings.Designer.cs">
+    <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="StorageDataSet.Designer.cs">
+    <Compile Include="StorageDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>StorageDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="StorageEditorForm.cs">
+    <Compile Include="StorageEditorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StorageEditorForm.Designer.cs">
-      <DependentUpon>StorageEditorForm.cs</DependentUpon>
+    <Compile Include="StorageEditorForm.Designer.vb">
+      <DependentUpon>StorageEditorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="XpoReportStorage.cs" />
+    <Compile Include="XpoReportStorage.vb" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -225,7 +227,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
   <Import Project="packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
@@ -233,7 +235,7 @@
     </PropertyGroup>
     <Error Condition="!Exists('packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net451\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
