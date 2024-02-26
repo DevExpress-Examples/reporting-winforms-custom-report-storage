@@ -63,7 +63,7 @@ namespace ReportStorageSample {
         }
         static byte[] GetBytes(Stream stream, int length) {
             byte[] result = new byte[length];
-            stream.Read(result, 0, result.Length);
+            DevExpress.Utils.Helpers.StreamHelper.FillBuffer(stream, result, 0, length);
             return result;
         }
         static InternalZipFile GetZipFile(InternalZipFileCollection zipFiles, string url) {
