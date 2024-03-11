@@ -40,7 +40,7 @@ When you click **Open** or **Save** in the Report Designer, the **Storage Editor
 ![Storage Editor](Images/storage-editor.png)
 
 
-## Files to Look At
+## Files to Review
 
 * [DataSetReportStorage.cs](CS/DataSetReportStorage.cs) (VB: [DataSetReportStorage.vb](VB/DataSetReportStorage.vb))
 * [Form1.cs](CS/Form1.cs) (VB: [Form1.vb](VB/Form1.vb))
@@ -57,8 +57,6 @@ When you click **Open** or **Save** in the Report Designer, the **Storage Editor
 - [End-User Report Designer for WinForms](https://docs.devexpress.com/XtraReports/10715/winforms-reporting/end-user-report-designer-for-winforms)
 - [End-User Documentation](https://docs.devexpress.com/XtraReports/5160/winforms-reporting/end-user-documentation)
 - [WinForms Reporting Application Security](https://docs.devexpress.com/XtraReports/116671/winforms-reporting/winforms-reporting-application-security)
-
-
 
 
 ## More Examples
