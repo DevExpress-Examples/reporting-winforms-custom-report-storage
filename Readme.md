@@ -33,7 +33,7 @@ For more information, review the following help topic: [Ensure Safe Loading of R
 
 The following image shows the invoked End-User Report Designer with Ribbon UI:
 
-![End-User Report Designer](images/report-designer.png)
+![End-User Report Designer](Images/report-designer.png)
 
 When you click **Open** or **Save** in the Report Designer, the **Storage Editor** window appears. It allows you to select a report or specify a new report name.
 
