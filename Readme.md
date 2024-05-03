@@ -23,11 +23,11 @@ Note that the default report serialization mechanism does not support data sourc
 
 When you run the project, a window appears that allows you to select a report, and open the End-User Designer to edit the report, or open the report preview.
 
-![Select Report](images/select-report.png)
+![Select Report](Images/select-report.png)
 
 If you click **Design**, the End-User Report Designer is invoked. It allows you to open, edit and save the report. End-User Report Designer displays the following warning on an attempt to load a report:
 
-![Ensure Safe Loading of Reports](images/warning.png)
+![Ensure Safe Loading of Reports](Images/warning.png)
 
 For more information, review the following help topic: [Ensure Safe Loading of Reports (WinForms)](https://docs.devexpress.com/XtraReports/119159/winforms-reporting/winforms-reporting-application-security/ensure-safe-loading-of-reports).
 
@@ -37,7 +37,7 @@ The following image shows the invoked End-User Report Designer with Ribbon UI:
 
 When you click **Open** or **Save** in the Report Designer, the **Storage Editor** window appears. It allows you to select a report or specify a new report name.
 
-![Storage Editor](images/storage-editor.png)
+![Storage Editor](Images/storage-editor.png)
 
 
 ## Files to Look At
