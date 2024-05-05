@@ -23,15 +23,15 @@ Note that the default report serialization mechanism does not support data sourc
 
 When you run the project, a window appears that allows you to select a report, and open the End-User Designer to edit the report, or open the report preview.
 
-![Select Report](images/select-report.png)
+![Select Report](Images/select-report.png)
 
 If you click **Design**, the End-User Report Designer is invoked. It allows you to open, edit and save the report.
 
-![End-User Report Designer](images/report-designer.png)
+![End-User Report Designer](Images/report-designer.png)
 
 When you click **Open** or **Save** in the Report Designer, the **Storage Editor** window appears. It allows you to select a report, and then save or load it.
 
-![Storage Editor](images/storage-editor.png)
+![Storage Editor](Images/storage-editor.png)
 
 
 ## Files to Look At
