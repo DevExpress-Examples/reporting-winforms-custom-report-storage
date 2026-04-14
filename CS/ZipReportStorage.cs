@@ -8,30 +8,10 @@ using DevExpress.Xpo;
 using DevExpress.Data.Filtering;        
 using DevExpress.XtraReports.UI;                 
 using DevExpress.XtraReports.Extensions;           
-using DevExpress.Utils.Zip;
 // ...
 
 namespace ReportStorageSample {
     class ZipReportStorage : ReportStorageExtension {
-        class ZipFilesHelper : IDisposable {
-            Stream stream;
-            InternalZipFileCollection zipFiles = new InternalZipFileCollection();
-            public InternalZipFileCollection ZipFiles {
-                get {
-                    return zipFiles;
-                }
-            }
-            public ZipFilesHelper(string path) {
-                if (File.Exists(path)) {
-                    stream = File.OpenRead(path);
-                    zipFiles = InternalZipArchive.Open(stream);
-                }
-            }
-            public virtual void Dispose() {
-                if (stream != null)
-                    stream.Dispose();
-            }
-        }
         const string fileName = "ReportStorage.zip";
         public ZipReportStorage() {
         }
@@ -50,28 +30,19 @@ namespace ReportStorageSample {
         }
         public override byte[] GetData(string url) {
             // Open ZIP archive.
-            using (ZipFilesHelper helper = new ZipFilesHelper(StoragePath)) {
-                // Read a file with a specified URL from the archive.
-                InternalZipFile zipFile = GetZipFile(helper.ZipFiles, url);
-                if (zipFile != null)
-                    return GetBytes(zipFile);
+            if (!File.Exists(StoragePath))
                 return new byte[] { };
+            using (var fileStream = File.OpenRead(StoragePath))
+            using (var archive = new ZipArchive(fileStream, ZipArchiveMode.Read)) {
+                var entry = archive.GetEntry(url);
+                if (entry == null)
+                    return new byte[] { };
+                using (var entryStream = entry.Open())
+                using (var ms = new MemoryStream()) {
+                    entryStream.CopyTo(ms);
+                    return ms.ToArray();
+                }
             }
-        }
-        static byte[] GetBytes(InternalZipFile zipFile) {
-            return GetBytes(zipFile.FileDataStream, (int)zipFile.UncompressedSize);
-        }
-        static byte[] GetBytes(Stream stream, int length) {
-            byte[] result = new byte[length];
-            DevExpress.Utils.Helpers.StreamHelper.FillBuffer(stream, result, 0, length);
-            return result;
-        }
-        static InternalZipFile GetZipFile(InternalZipFileCollection zipFiles, string url) {
-            foreach(InternalZipFile item in zipFiles) {
-                if (StringsEgual(item.FileName, url))
-                    return item;
-            }
-            return null;
         }
         static bool StringsEgual(string a, string b) {
             return string.Equals(a, b, StringComparison.OrdinalIgnoreCase);
@@ -83,23 +54,41 @@ namespace ReportStorageSample {
         void SaveArchive(string url, byte[] buffer) {
             string tempPath = Path.ChangeExtension(StoragePath, "tmp");
             // Create a new ZIP archive.
-            using(InternalZipArchive arch = new InternalZipArchive(tempPath)) {
+            using (var destStream = new FileStream(tempPath, FileMode.Create))
+            using (var destArchive = new ZipArchive(destStream, ZipArchiveMode.Create)) {
                 // Open a ZIP archive where report files are stored.
-                using (ZipFilesHelper helper = new ZipFilesHelper(StoragePath)) {
-                    bool added = false;
-                    // Copy all report files to a new archive.
-                    // Update a file with a specified URL.
-                    // If the file does not exist, create it.
-                    foreach(InternalZipFile item in helper.ZipFiles) {
-                        if (StringsEgual(item.FileName, url)) {
-                            arch.Add(item.FileName, DateTime.Now, buffer);
-                            added = true;
+                if (File.Exists(StoragePath)) {
+                    using (var srcStream = File.OpenRead(StoragePath))
+                    using (var srcArchive = new ZipArchive(srcStream, ZipArchiveMode.Read)) {
+                        bool added = false;
+                        // Copy all report files to a new archive.
+                        // Update a file with a specified URL.
+                        // If the file does not exist, create it.
+                        foreach (var item in srcArchive.Entries) {
+                            if (StringsEgual(item.FullName, url)) {
+                                var newEntry = destArchive.CreateEntry(item.FullName);
+                                using (var newStream = newEntry.Open())
+                                    newStream.Write(buffer, 0, buffer.Length);
+                                added = true;
+                            }
+                            else {
+                                var newEntry = destArchive.CreateEntry(item.FullName);
+                                using (var entryStream = item.Open())
+                                using (var newStream = newEntry.Open())
+                                    entryStream.CopyTo(newStream);
+                            }
                         }
-                        else
-                            arch.Add(item.FileName, DateTime.Now, GetBytes(item));
+                        if (!added) {
+                            var newEntry = destArchive.CreateEntry(url);
+                            using (var newStream = newEntry.Open())
+                                newStream.Write(buffer, 0, buffer.Length);
+                        }
                     }
-                    if (!added)
-                        arch.Add(url, DateTime.Now, buffer);
+                }
+                else {
+                    var newEntry = destArchive.CreateEntry(url);
+                    using (var newStream = newEntry.Open())
+                        newStream.Write(buffer, 0, buffer.Length);
                 }
             }
             // Replace the old ZIP archive with the new one.
@@ -170,12 +159,15 @@ namespace ReportStorageSample {
         }
         List<string> GetUrlsCore(Predicate<string> method) {
             List<string> list = new List<string>();
-            using (ZipFilesHelper helper = new ZipFilesHelper(StoragePath)) {
-                foreach(InternalZipFile item in helper.ZipFiles)
-                    if (method == null || method(item.FileName))
-                        list.Add(item.FileName);
+            if (!File.Exists(StoragePath))
                 return list;
+            using (var fileStream = File.OpenRead(StoragePath))
+            using (var archive = new ZipArchive(fileStream, ZipArchiveMode.Read)) {
+                foreach (var entry in archive.Entries)
+                    if (method == null || method(entry.FullName))
+                        list.Add(entry.FullName);
             }
+            return list;
         }
     }
 }
