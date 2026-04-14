@@ -113,7 +113,7 @@ Namespace ReportStorageSample
         End Sub
         Private Function GetBuffer(report As XtraReport) As Byte()
             Using stream As New MemoryStream()
-                report.SaveLayout(stream)
+                report.SaveLayoutToXml(stream)
                 Return stream.ToArray()
             End Using
         End Function
