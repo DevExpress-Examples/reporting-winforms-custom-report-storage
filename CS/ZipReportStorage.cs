@@ -98,7 +98,7 @@ namespace ReportStorageSample {
         }
         byte[] GetBuffer(XtraReport report) {
             using (MemoryStream stream = new MemoryStream()) {
-                report.SaveLayout(stream);
+                report.SaveLayoutToXml(stream);
                 return stream.ToArray();
             }
         }
